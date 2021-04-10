@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="811.0" prefWidth="1081.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.utcn.magazin.controller.Controller">
+
+   <right>
+      <VBox alignment="CENTER" prefHeight="806.0" prefWidth="736.0">
+         <Label text=" Real-time queue evolution :" />
+         <TextArea fx:id="rezultatSimulare" prefHeight="701.0" prefWidth="715.0">
+            <VBox.margin>
+               <Insets bottom="20.0" left="10.0" right="10.0" top="10" />
+            </VBox.margin>
+         </TextArea>
+      </VBox>
+   </right>
+   <left>
+      <VBox alignment="TOP_RIGHT" prefHeight="305.0" prefWidth="314.0" BorderPane.alignment="CENTER">
+         <HBox prefHeight="72.0" prefWidth="285.0">
+            <VBox alignment="TOP_LEFT" spacing="5">
+               <Label text="Numar Clienti  :" />
+               <TextField fx:id="numarClienti" prefHeight="25.0" prefWidth="240.0">
+                  <VBox.margin>
+                     <Insets bottom="20.0" left="10.0" right="10.0" top="10" />
+                  </VBox.margin>
+               </TextField>
+            </VBox>
+         </HBox>
+         <HBox>
+            <VBox alignment="TOP_LEFT" spacing="5">
+               <Label text="Numar case :" />
+               <TextField fx:id="numarCase" prefHeight="25.0" prefWidth="240.0">
+                  <VBox.margin>
+                     <Insets bottom="20.0" left="10.0" right="10.0" />
+                  </VBox.margin>
+               </TextField>
+
+            </VBox>
+         </HBox>
+         <HBox>
+            <VBox alignment="TOP_LEFT" spacing="5">
+               <Label text="Simulation Time:" />
+               <TextField fx:id="timpSimulare" prefHeight="25.0" prefWidth="240.0">
+                  <VBox.margin>
+                     <Insets bottom="30.0" left="10.0" right="10.0" />
+                  </VBox.margin>
+               </TextField>
+            </VBox>
+         </HBox>
+         <HBox>
+            <VBox alignment="TOP_LEFT" spacing="2">
+               <Label text="Min Arrival Time:" />
+               <TextField fx:id="timpMinAjuns" prefHeight="25.0" prefWidth="240.0">
+                  <VBox.margin>
+                     <Insets bottom="2" left="10.0" right="10.0" />
+                  </VBox.margin>
+               </TextField>
+               <Label text="Max Arrival Time:" />
+               <TextField fx:id="timpMaxAjuns" prefHeight="25.0" prefWidth="240.0">
+                  <VBox.margin>
+                     <Insets bottom="30.0" left="10.0" right="10.0" />
+                  </VBox.margin>
+               </TextField>
+            </VBox>
+         </HBox>
+         <HBox>
+            <VBox alignment="TOP_LEFT" spacing="2">
+               <Label text="Min Service Time:" />
+               <TextField fx:id="timpMin" prefHeight="25.0" prefWidth="240.0">
+                  <VBox.margin>
+                     <Insets bottom="2" left="10.0" right="10.0" />
+                  </VBox.margin>
+               </TextField>
+               <Label text="Max Service Time:" />
+               <TextField fx:id="timpMax" prefHeight="25.0" prefWidth="240.0">
+                  <VBox.margin>
+                     <Insets bottom="20.0" left="10.0" right="10.0" />
+                  </VBox.margin>
+               </TextField>
+            </VBox>
+         </HBox>
+
+         <HBox alignment="CENTER_LEFT">
+            <Button fx:id="Start" onAction="#runSimulation" text=" Run Simulation " textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </HBox>
+         <VBox>
+
+         <HBox>
+
+
+            <Button fx:id="StrategieTimp" onAction="#changeStrategyForTime" text=" Decide by Length" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="StrategieLungime" onAction="#changeStrategyForLength" text=" Decide by Time " textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </HBox>
+
+            <Label alignment="CENTER" text="(Default value selected is by time ) " />
+         </VBox>
+         <VBox.margin>
+            <Insets bottom="20.0" left="10.0" right="10.0" />
+         </VBox.margin>
+      </VBox>
+
+   </left>
+
+
+
+</BorderPane>
